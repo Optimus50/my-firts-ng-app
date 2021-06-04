@@ -1,16 +1,25 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {FormsModule} from "@angular/forms";
+import {WarningComponent} from './warning/warning.component';
+import {SuccessalertComponent} from './successalert/successalert.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WarningComponent,
+    SuccessalertComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
