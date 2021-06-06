@@ -1,1 +1,17 @@
-<p style="animation: alternate"> This is success file, everything looks great</p>
+<p> This is success file, everything looks great</p>
+<label> Server name</label>
+<input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServer($event)"
+
+>
+<p>{{serverName}}</p>
+<button
+  class="btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server</button>
+
+<p [innerText]="allowNewServer"></p>
+<p>{{ serverCreateStatus}}</p>
+<p>{{'Server'}} is running on {{serverId}} and it is {{getServer()}}</p>
